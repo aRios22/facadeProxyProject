@@ -29,9 +29,7 @@ public class OrderFacade {
      * @param amount 
      */
     public void addDish(Dish dish, int amount){
-        for (int i=1; i<=amount; i++){
-            order.addDish(dish, amount);
-        }
+        order.addDish(dish, amount);
     }
     
     /**

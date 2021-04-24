@@ -115,7 +115,7 @@ public class Order {
         else{
             int vPrice = 0;
             for(Item vItem : this.details){
-                vPrice += vItem.getDish().getPrice();
+                vPrice += (vItem.getDish().getPrice() * vItem.getAmount());
             }
             return vPrice;
         }
