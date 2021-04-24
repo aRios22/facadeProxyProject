@@ -13,5 +13,9 @@ import co.unicauca.facadeProxy.domain.Order;
  */
 public interface IOrderRepository {
     
+    /**
+     * Definicion del constructor parametrizado de la interfaz IOrderRepository
+     * @param order 
+     */
     public void createOrder(Order order);
 }

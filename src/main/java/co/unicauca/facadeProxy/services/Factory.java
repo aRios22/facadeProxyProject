@@ -13,10 +13,17 @@ public class Factory {
     
     private static Factory instance;
 
+    /**
+     * Constructor default de la clase Factory
+     */
     private Factory(){
         
     }
     
+    /**
+     * Accede a la instance privada de la clase Factory
+     * @return instance
+     */
     public static Factory getInstance() {
         if(instance == null){
             instance = new Factory();
@@ -25,6 +32,11 @@ public class Factory {
 
     }
     
+    /**
+     * Accede al reporitorio default donde se guardan las ordenes.
+     * @param type tipo de repositorio
+     * @return result
+     */
     public IOrderRepository getRepository(String type){
         IOrderRepository result = null;
         switch (type){

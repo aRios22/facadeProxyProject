@@ -13,6 +13,10 @@ import co.unicauca.facadeProxy.domain.Order;
  */
 public class OrderRepository implements IOrderRepository{
 
+    /**
+     * Sobreescribe el constructor parametrizado de la interfaz IOrderRepository
+     * @param order 
+     */
     @Override
     public void createOrder(Order order) {
         
