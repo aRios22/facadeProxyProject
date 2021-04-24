@@ -5,12 +5,12 @@
  */
 package co.unicauca.facadeProxy.presentation;
 
-import co.unicauca.facadeProxy.access.Factory;
-import co.unicauca.facadeProxy.access.IOrderRepository;
+import co.unicauca.facadeProxy.services.Factory;
+import co.unicauca.facadeProxy.services.IOrderRepository;
 import co.unicauca.facadeProxy.domain.Customer;
 import co.unicauca.facadeProxy.domain.Dish;
 import co.unicauca.facadeProxy.domain.State;
-import co.unicauca.facadeProxy.facade.OrderFacade;
+import co.unicauca.facadeProxy.domain.OrderFacade;
 
 /**
  *
@@ -20,8 +20,6 @@ public class Main {
     
     public static void main(String[] args) {        
         
-             
-            
         OrderFacade facade = new OrderFacade();        
         facade.createOrder(new Customer(1, "Carlos Sanchez", "Calle 12 No. 12-12 Barrio Caldas", "3115677899", "Popayán"));        facade.addDish(new Dish(1, "Hamburguesa vegetariana", 5000), 2);        facade.addDish(new Dish(2, "Hamburguesa sencilla", 4000), 3);        
         facade.addDish(new Dish(3, "Jugo hit", 1000), 2);        
@@ -38,9 +36,7 @@ public class Main {
         facade.save(repo);        
         System.out.println("Pedido grabado con éxito en la base de datos");    
         
-                
-
-        
+                     
         
         /*// PROXY MAIN
         //El sujeto real.

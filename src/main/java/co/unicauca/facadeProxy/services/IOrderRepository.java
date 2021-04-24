@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.facadeProxy.access;
+package co.unicauca.facadeProxy.services;
+
+import co.unicauca.facadeProxy.domain.Order;
 
 /**
  *
@@ -11,4 +13,5 @@ package co.unicauca.facadeProxy.access;
  */
 public interface IOrderRepository {
     
+    public void createOrder(Order order);
 }

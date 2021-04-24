@@ -3,13 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.facadeProxy.facade;
+package co.unicauca.facadeProxy.domain;
 
-import co.unicauca.facadeProxy.access.IOrderRepository;
-import co.unicauca.facadeProxy.domain.Customer;
-import co.unicauca.facadeProxy.domain.Dish;
-import co.unicauca.facadeProxy.domain.Order;
-import co.unicauca.facadeProxy.domain.State;
+import co.unicauca.facadeProxy.services.IOrderRepository;
 
 /**
  *
@@ -20,35 +16,35 @@ public class OrderFacade {
     private Order order;
     
     public void createOrder(Customer customer){
-        
+        this.order = new Order(customer);
     }
     
     public void addDish(Dish dish, int amount){
-        
+        order.addDish(dish, amount);
     }
     
     public void changeState(State state){
-        
+        order.setState(state);
     }
     
     public void cancelOrder(){
-        
+        order.setState(State.CANCELED);
     }
     
     public int calculateTotal(){
-        return 1;
+        return order.calculateTotal();
     }
     
     public Order getOrder(){      
-        return null;   
+        return this.order;   
     }
     
     public int totalDishes(){  
-        return 0;   
+        return this.order.getDetails().size();   
     }
     
     public void save(IOrderRepository repo){
-        
+        repo.createOrder(this.order);
     }
     
     

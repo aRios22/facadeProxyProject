@@ -14,8 +14,9 @@ class Item {
     private Dish dish;
     private int amount;
     
-    public Item(){
-        
+    public Item(Dish dish, int amount){
+        this.dish = dish;
+        this.amount = amount;
     }
     
     public Dish getDish(){

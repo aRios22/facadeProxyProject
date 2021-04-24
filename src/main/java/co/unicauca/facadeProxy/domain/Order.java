@@ -1,7 +1,7 @@
 package co.unicauca.facadeProxy.domain;
 
-
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -20,7 +20,7 @@ public class Order {
     private Customer customer;
     private LocalDate date;
     private State state;
-    private List<Item> details;
+    private List<Item> details = new ArrayList<>();
     
     public Order(Customer customer){
         
@@ -59,10 +59,21 @@ public class Order {
     }
     
     public void addDish(Dish dish, int amount){
-        
+        Item item = new Item(dish , amount);
+        this.details.add(item);         
     }
     
     public int calculateTotal(){
-        return 1;
+        if(this.details.isEmpty()){
+            return 0;
+        }   
+        else{
+            int vPrice = 0;
+            for(Item vItem : this.details){
+                vPrice += vItem.getDish().getPrice();
+            }
+            return vPrice;
+        }
     }
+    
 }
