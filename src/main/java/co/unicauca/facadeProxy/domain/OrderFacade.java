@@ -20,7 +20,9 @@ public class OrderFacade {
     }
     
     public void addDish(Dish dish, int amount){
-        order.addDish(dish, amount);
+        for (int i=1; i<=amount; i++){
+            order.addDish(dish, amount);
+        }
     }
     
     public void changeState(State state){

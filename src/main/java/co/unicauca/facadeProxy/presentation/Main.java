@@ -21,7 +21,9 @@ public class Main {
     public static void main(String[] args) {        
         
         OrderFacade facade = new OrderFacade();        
-        facade.createOrder(new Customer(1, "Carlos Sanchez", "Calle 12 No. 12-12 Barrio Caldas", "3115677899", "Popayán"));        facade.addDish(new Dish(1, "Hamburguesa vegetariana", 5000), 2);        facade.addDish(new Dish(2, "Hamburguesa sencilla", 4000), 3);        
+        facade.createOrder(new Customer(1, "Carlos Sanchez", "Calle 12 No. 12-12 Barrio Caldas", "3115677899", "Popayán"));        
+        facade.addDish(new Dish(1, "Hamburguesa vegetariana", 5000), 2);        
+        facade.addDish(new Dish(2, "Hamburguesa sencilla", 4000), 3);        
         facade.addDish(new Dish(3, "Jugo hit", 1000), 2);        
         System.out.println("Pedido creado");        
         facade.changeState(State.CONFIRMED);        
