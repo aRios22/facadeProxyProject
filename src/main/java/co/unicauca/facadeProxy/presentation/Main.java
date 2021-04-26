@@ -5,12 +5,15 @@
  */
 package co.unicauca.facadeProxy.presentation;
 
+import co.unicauca.facadeProxy.proxy.ProxyClient;
 import co.unicauca.facadeProxy.services.Factory;
 import co.unicauca.facadeProxy.services.IOrderRepository;
 import co.unicauca.facadeProxy.domain.Customer;
 import co.unicauca.facadeProxy.domain.Dish;
 import co.unicauca.facadeProxy.domain.State;
 import co.unicauca.facadeProxy.domain.OrderFacade;
+import co.unicauca.facadeProxy.proxy.IOrderService;
+import co.unicauca.facadeProxy.proxy.OrderServiceLogger;
 
 /**
  *
@@ -40,7 +43,7 @@ public class Main {
         
                      
         
-        /*// PROXY MAIN
+        // PROXY MAIN
         //El sujeto real.
         OrderFacade orderFacade = new OrderFacade();
         //El objeto proxy. Se le pasa el objeto real por el constructor (inyección)
@@ -62,7 +65,7 @@ public class Main {
         //Ahora ejecutamos el cliente proxy, y le pasamos el sujeto que debe utilizar.
         ProxyClient client = new ProxyClient(orderProxy);
         client.createOrder();    
-        */
+        
     
     }
 }

@@ -5,13 +5,14 @@
  */
 package co.unicauca.facadeProxy.domain;
 
+import co.unicauca.facadeProxy.proxy.IOrderService;
 import co.unicauca.facadeProxy.services.IOrderRepository;
 
 /**
  *
  * @author Andres Rios
  */
-public class OrderFacade {
+public class OrderFacade implements IOrderService{
     
     private Order order;
     
@@ -76,6 +77,7 @@ public class OrderFacade {
      * Guarda la Orden actual en un repositorio
      * @param repo Repositorio en el que se quiere guardar
      */
+    @Override
     public void save(IOrderRepository repo){
         repo.createOrder(this.order);
     }
