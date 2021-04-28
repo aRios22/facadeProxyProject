@@ -1,3 +1,5 @@
+package co.unicauca.facadeProxy.test;
+
 
 import co.unicauca.facadeProxy.domain.Customer;
 import co.unicauca.facadeProxy.domain.Dish;
@@ -31,7 +33,7 @@ public class OrderFacadeTest {
         facade.changeState(State.FINALIZED);
         assertEquals(State.FINALIZED, facade.getOrder().getState());
         assertEquals(3, facade.totalDishes());
-        assertEquals(25500, facade.calculateTotal());
+        assertEquals(24000, facade.calculateTotal());
         facade.cancelOrder();
         facade.changeState(State.CANCELLED);
     }

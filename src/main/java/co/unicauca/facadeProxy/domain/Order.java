@@ -27,7 +27,8 @@ public class Order {
      * @param customer 
      */
     public Order(Customer customer){
-        
+        this.customer=customer;
+        this.state=State.NEW;
     }
     
     /**

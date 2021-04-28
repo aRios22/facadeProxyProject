@@ -25,8 +25,11 @@ public class OrderServiceLogger implements IOrderService {
 
     @Override
     public void save(IOrderRepository repo) {
-        repo.createOrder(orderFacade.getOrder());
-        String message = "Pedido Guardado en la Base de Datos";
+        Logger logger= LoggerFactory.getLogger(OrderServiceLogger.class);
+        orderFacade.save(repo);
+        
+        //se hace el log
+        String message = "Pedido guardado en la base de datos";
         logger.info(message);
     }
 

@@ -9,7 +9,7 @@ package co.unicauca.facadeProxy.domain;
  *
  * @author Andres Rios
  */
-class Item {
+public class Item {
     
     private Dish dish;
     private int amount;
