@@ -15,6 +15,6 @@ public enum State {
     CONFIRMED,
     DISPACHED,
     FINALIZED,
-    CANCELED
+    CANCELLED
     
 }

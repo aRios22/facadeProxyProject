@@ -7,24 +7,27 @@ package co.unicauca.facadeProxy.proxy;
 
 import co.unicauca.facadeProxy.domain.OrderFacade;
 import co.unicauca.facadeProxy.services.IOrderRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
  * @author Andres Rios
  */
-public class OrderServiceLogger implements IOrderService{
+public class OrderServiceLogger implements IOrderService {
 
     private OrderFacade orderFacade;
-    
-    public OrderServiceLogger(OrderFacade orderFacade){
+    private Logger logger;
+
+    public OrderServiceLogger(OrderFacade orderFacade) {
         this.orderFacade = orderFacade;
     }
-    
+
     @Override
     public void save(IOrderRepository repo) {
         repo.createOrder(orderFacade.getOrder());
         String message = "Pedido Guardado en la Base de Datos";
         logger.info(message);
     }
-    
+
 }

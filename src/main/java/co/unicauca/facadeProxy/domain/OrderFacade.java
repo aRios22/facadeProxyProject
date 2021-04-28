@@ -46,7 +46,7 @@ public class OrderFacade implements IOrderService{
      * Cambia el Estado de la clase Order a CANCELED
      */
     public void cancelOrder(){
-        order.setState(State.CANCELED);
+        order.setState(State.CANCELLED);
     }
     
     /**
