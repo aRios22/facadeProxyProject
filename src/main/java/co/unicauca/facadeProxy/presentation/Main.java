@@ -23,6 +23,7 @@ public class Main {
     
     public static void main(String[] args) {        
         
+        System.out.println("------------------SALIDA FACADE------------------");
         OrderFacade facade = new OrderFacade();        
         facade.createOrder(new Customer(1, "Carlos Sanchez", "Calle 12 No. 12-12 Barrio Caldas", "3115677899", "Popayán"));        
         facade.addDish(new Dish(1, "Hamburguesa vegetariana", 5000), 2);        
@@ -42,7 +43,7 @@ public class Main {
         System.out.println("Pedido grabado con éxito en la base de datos");    
         
                      
-        
+        System.out.println("------------------SALIDA PROXY------------------");
         // PROXY MAIN
         //El sujeto real.
         OrderFacade orderFacade = new OrderFacade();

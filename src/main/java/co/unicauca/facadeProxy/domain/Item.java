@@ -41,8 +41,8 @@ public class Item {
     }
     
     /**
-     * Refactoriza el Dish de un Objeto Item
-     * @param Dish 
+     * Refactoriza el Dish de un Objeto Item 
+     * @param dish
      */
     public void setDish(Dish dish){
         this.dish = dish;
