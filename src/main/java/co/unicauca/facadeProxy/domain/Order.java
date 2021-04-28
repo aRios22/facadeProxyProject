@@ -27,8 +27,9 @@ public class Order {
      * @param customer 
      */
     public Order(Customer customer){
-        this.customer=customer;
-        this.state=State.NEW;
+        this.customer = customer;
+        this.state = State.NEW;
+        this.date = LocalDate.now();
     }
     
     /**
